@@ -1,0 +1,250 @@
+html, body {
+    height: 100vh;
+    width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    letter-spacing: .08rem;
+    color: #373737;
+    font-weight: 700;
+    margin-top: 0; }
+
+h1 {
+    font-size: 4.0rem;
+    line-height: 5.25rem;
+    font-weight: 500;
+    margin-bottom: 4.0rem; }
+
+h2 {
+    font-size: 3.0rem;
+    line-height: 4.5rem;
+    margin-top: 4.0rem;
+    margin-bottom: 3.0rem; }
+
+h3 {
+    font-size: 2.8rem;
+    line-height: 4.2rem;
+    margin-bottom: 2.8rem; }
+
+h4 {
+    font-size: 2.6rem;
+    line-height: 3.9rem;
+    margin-bottom: 2.6rem; }
+
+h5 {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    margin-bottom: 2.4rem; }
+
+h6 {
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+    margin-bottom: 2.2rem; }
+
+p,
+.paragraph {
+    font-size: 2.0rem;
+    line-height: 3.0rem;
+    margin-bottom: 2.0rem;
+    margin-top: 0; }
+
+.paragraph--large {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    margin-bottom: 2.4rem;
+    font-weight: 500; }
+
+@media (max-width: 800px) {
+    .paragraph--large {
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-bottom: 2rem; } }
+small {
+    font-size: 1.75rem;
+    line-height: 2.625rem; }
+
+a,
+.link {
+    -webkit-transition: color 0.15s linear;
+    -moz-transition: color 0.15s linear;
+    transition: color 0.15s linear;
+    text-decoration: none;
+    color: #ff00c8;
+    cursor: pointer; }
+
+a:hover,
+.link:hover {
+    color: #e600b4;
+    text-decoration: underline; }
+
+.link--quiet {
+    color: #373737; }
+
+.link--quiet:hover {
+    color: #ff00c8; }
+
+.link--silent {
+    color: #373737; }
+
+.link--silent:hover {
+    color: #373737; }
+
+
+.page {
+    -webkit-transition: right, 0.25s;
+    -moz-transition: right, 0.25s;
+    -ms-transition: right, 0.25s;
+    -o-transition: right, 0.25s;
+    transition: right, 0.25s;
+    height: 90vh;
+    width: 100%;
+    z-index: 0;
+    right: 0;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box !important;
+}
+
+body {
+    font-family: "Grandesign", Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    color: #373737;
+    font-size: 2rem;
+    margin: 0;
+}
+
+body.loaded {
+    touch-action: pan-y;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.logo {
+    max-height: 100%;
+    margin-right: 10px;
+    animation:pulse 2s infinite alternate;
+    -webkit-animation-timing-function: linear;
+    float: left;
+}
+
+.logo:hover {
+    animation-iteration-count: 1;
+    animation: toNone 2s alternate;
+}
+
+@-webkit-keyframes pulse {
+    from { -webkit-filter: blur(0px); filter: blur(0px); }
+    to { -webkit-filter: blur(2px); filter: blur(2px);}
+}
+
+@-webkit-keyframes toNone {
+    to { -webkit-filter: blur(0px); filter: blur(0px);}
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: inherit;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: #ffff;
+}
+
+.navigation .right a {
+    display: inline-flex;
+    align-items: center;
+    width: 25%;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+hr,
+.divider {
+    background: #e7ebee;
+    border: 0;
+    color: #f1f5f8;
+    display: block;
+    font-size: 0;
+    height: 0.2rem;
+    margin: 0 0 2rem 0;
+    width: 100%; }
+
+.divider--fat {
+    width: 14rem;
+    height: .5rem;
+    margin: 5rem auto; }
+
+p code,
+li code {
+    background-color: #fafafa;
+    border: 1px solid #c9d2d9;
+    border-radius: 3px;
+    color: #373737;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1.5rem;
+    padding: .15rem .50rem;
+    white-space: nowrap; }
+
+@media (max-width: 800px) {
+    p code,
+    li code {
+        font-size: 1.3rem; } }
+pre {
+    border-radius: 3px;
+    padding: 4rem;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    margin: 3rem 0;
+    width: 100%;
+    background-color: #f7f7f7;
+    white-space: pre-wrap;
+}
+
+.navigation .root-link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: inline-flex;
+    top: 100%;
+    width: 40%;
+    float: left;
+    height: 100%;
+    line-height: 100%;
+}
+
+
+
+@media (max-width: 800px) {
+    body {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+}
