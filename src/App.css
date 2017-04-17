@@ -109,7 +109,6 @@ a:hover,
 .page {
     -webkit-transition: right, 0.25s;
     -moz-transition: right, 0.25s;
-    -ms-transition: right, 0.25s;
     -o-transition: right, 0.25s;
     transition: right, 0.25s;
     height: 90vh;
@@ -247,4 +246,50 @@ pre {
         font-size: 1.6rem;
         line-height: 2.4rem;
     }
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 40px;
+}
+
+a, .link {
+    transition: color 0.15s linear;
+    text-decoration: none;
+}
+
+.icons-list__item a {
+    color: #373737;
+}
+
+.icons-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background: #ec33ff;
+    color: white;
 }

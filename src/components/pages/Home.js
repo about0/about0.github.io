@@ -10,9 +10,10 @@ const portraitStyles = {
 
 const homePageStyles = {
   width: '80%',
+  maxWidth: 800,
   margin: '0 auto',
   display: 'box',
-  webkitBoxDirection: 'normal',
+  WebkitBoxDirection: 'normal',
   WebkitBoxOrient: 'vertical'
 }
 
@@ -21,7 +22,7 @@ const centeredContainerStyles = {
   height: '100%',
   display: 'flex',
   justifyContent: 'space-around',
-  webkitBoxAlign: 'center'
+  WebkitBoxAlign: 'center'
 }
 
 const profileCardTitleStyles = {
@@ -29,7 +30,6 @@ const profileCardTitleStyles = {
   lineHeight: '3rem',
   marginBottom: '1rem'
 }
-
 
 
 const homePageProfileCardStyles = {
@@ -61,21 +61,28 @@ const aboutStyles = {
   marginBottom: '2rem'
 }
 
-const iconListStyles = {
-  flexWrap: 'wrap'
-}
+// const iconListStyles = {
+//   flexWrap: 'wrap',
+//   display: 'flex',
+//   WebkitBoxOrient: 'horizontal',
+//   WebkitBoxDirection: 'normal',
+//   WebkitBoxLines: 'multiple',
+//   margin: 0,
+//   padding: 0
+// }
 
 const listItemStyles = {
   WebkitBoxFlex: 0,
   display: 'list-item',
   WebkitBoxOrient: 'horizontal',
-  mozBoxOrient: 'horizontal',
   WebkitBoxDirection: 'normal',
   flexDirection: 'row',
   WebkitBoxLines: 'multiple',
   flexWrap: 'wrap',
   margin: 0,
-  padding: 0
+  padding: 0,
+  listStyleType: 'none',
+  color: '#373737 !important'
 }
 
 export const Home = () => (
@@ -99,15 +106,16 @@ export const Home = () => (
           href="https://facebook.github.io/react/">React</a>. Focusing mostly on JS-related projects.
         </p>
       </section>
-      <ul style={iconListStyles}>
-        <li style={listItemStyles}><a href="mailto:ghostautomatic@gmail.com" rel="nofollow" target="_blank" title="Send me an email">
-          <i className="fa fa-envelope" href=''>
-            Email
-          </i>
+      <ul  className="icons-list">
+        <li style={listItemStyles} className="icons-list__item"><a href="mailto:ghostautomatic@gmail.com" rel="nofollow" target="_blank"
+                                      title="Send me an email">
+          <i className="fa fa-envelope" aria-hidden="true"></i> Email
         </a></li>
-        <li style={listItemStyles}>LinkedIn</li>
-        <li style={listItemStyles}>Skype</li>
-        <li style={listItemStyles}>Github</li>
+        <li style={listItemStyles} className="icons-list__item"><a href="https://www.linkedin.com/in/about0/" rel="nofollow" target="_blank" ><i className="fa fa-linkedin" aria-hidden="true" />
+          LinkedIn
+        </a></li>
+        <li style={listItemStyles} className="icons-list__item"><a href="https://github.com/about0" rel="nofollow" target="_blank" ><i className="fa fa-github" aria-hidden="true"></i>Github</a></li>
+        <li style={listItemStyles} className="icons-list__item"><a href="skype:bogdank.1"><i className="fa fa-skype"></i>Skype</a></li>
 
       </ul>
     </article>
